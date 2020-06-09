@@ -1,4 +1,4 @@
-image: gcr.io/gcp-bugbounty/backdoor
+image: gcr.io/gcp-bugbounty/attacker
 
 a:
   script:
